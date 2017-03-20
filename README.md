@@ -157,7 +157,7 @@ $users = $db->fetch();
 
 ### Running raw SQL queries
 ```php
-$db->raw_query('SELECT * from users where id >= ?');
+$db->raw_query('SELECT * from users');
 $users = $db->fetch();
 ```
 
