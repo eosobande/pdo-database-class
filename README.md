@@ -255,7 +255,7 @@ var_dump($db->fetch());
 
     foreach ($users as $key => $user) {
         $db->execute([$user['user_id']], TRUE);
-        $users[$key]['product_count'] = $db->fetch(PDOdb::_FETCH_ONE, FALSE);
+        $users[$key]['product_count'] = $db->fetch(PDOdb::_FETCH_ONE_FIELD, FALSE);
     }
 
     print_r($users);
