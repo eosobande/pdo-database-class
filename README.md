@@ -117,9 +117,9 @@ $db->where (["id", 1]);
 $db->select('users');
 $user = $db->fetch(PDOdb::_FETCH_ONE);
 echo $user['id'];
-
+```
 or select one column value or function result
-
+```php
 $db->select("users", "count(*)");
 $count = $db->fetch(PDOdb::_FETCH_ONE_FIELD);
 echo "{$count} users found";
