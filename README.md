@@ -58,7 +58,7 @@ If you need to get already created pdodb object from another class or function u
 
 ### Insert Query
 Simple example
-
+```php
 $db->insert('users', [$username, $email], 'username,email');
 if ($db->execute())
     echo 'user was created. Id=' . $db->last_insert_id();
