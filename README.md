@@ -95,11 +95,11 @@ $db->update('users', $data, 5);
 ```
 
 ### Select Query
-After any select/get function calls amount or returned rows is stored in $count variable
+After any select function calls amount or returned rows is stored in $count variable
 ```php
 $db->select('users'); 
 $users = $db->fetch(); // contains an Array of all users
-$users = $db->get('users', 10); //contains an Array 10 users
+$users = $db->select('users', 10); //contains an Array 10 users
 ```
 
 or select with custom columns set. Functions also could be used
@@ -174,13 +174,13 @@ $db->select ('users');
 
 ```php
 $db->where (['id', 1], ['username', 'emmanuel', '=']);
-$results = $db->get ('users');
+$results = $db->select ('users');
 // Gives: SELECT * FROM users WHERE id=1 AND username='emmanuel';
 ```
 
 ```php
 $db->where ('id=1', ['username', 'emmanuel', '=', 'or']);
-$results = $db->get ('users');
+$results = $db->select ('users');
 // Gives: SELECT * FROM users WHERE id=1 OR username='emmanuel';
 ```
 
@@ -242,13 +242,6 @@ $db->where(['user_id', $sq, 'in']);
 $db->select('products');
 var_dump($db->fetch());
 ```
- 
-A subquery with an alias specified to use in JOINs . Eg. (select * from users) sq
-```php
-$sq = $db->subQuery("sq");
-$sq->get ("users");
-```
-
 
 ### Prepared queries with placeholders
 ```php
