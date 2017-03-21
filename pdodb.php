@@ -7,7 +7,7 @@
 	 * @package   PdoDb
 	 * @author    Emmanuel O. Sobande <eosobande@gmail.com>
 	 * @copyright Copyright (c) 2016
-	 * @link      http://github.com/eosobande/PHP-MySQLi-Database-Class 
+	 * @link      http://github.com/eosobande/pdo-database-class
 	 * @version   1.0
 	 */
 
