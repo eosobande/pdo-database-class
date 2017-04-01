@@ -220,11 +220,9 @@ Join table products with table users with LEFT JOIN by user_id
 ### JOIN method
 ```php
 $tables = [
-    
     ['products', 'as'='p'],
     ['users', 'as=>'u', 'join'=>'left', 'on'=>'p.user_id=u.user_id']
-
-]
+];
 
 $db->select($tables);
 $products = $db->fetch();
